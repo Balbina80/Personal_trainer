@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Adrian Jaskiewicz Personal Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">AJ Fitness</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bookings.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h2>Book a Session</h2>
+        <p>Book your training session and take the first step towards your fitness goals.</p>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <div class="container booking-grid">
+
+        <div class="booking-info">
+          <h3>Training Options</h3>
+          <p>Choose the type of support you are interested in:</p>
+
+          <ul class="booking-list">
+            <li>1-to-1 Personal Training</li>
+            <li>Strength Training</li>
+            <li>Fat Loss Support</li>
+            <li>Beginner-Friendly Coaching</li>
+            <li>General Fitness Guidance</li>
+          </ul>
+
+          <p>
+            Once your enquiry is sent, Adrian can contact you to discuss availability,
+            goals and the best training option for you.
+          </p>
+        </div>
+
+        <div class="booking-form-box">
+          <h3>Booking Form</h3>
+
+          <form class="booking-form">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Your name">
+
+            <label for="email-booking">Email Address</label>
+            <input type="email" id="email-booking" name="email-booking" placeholder="Your email">
+
+            <label for="phone-booking">Phone Number</label>
+            <input type="tel" id="phone-booking" name="phone-booking" placeholder="Your phone number">
+
+            <label for="training-type">Training Type</label>
+            <select id="training-type" name="training-type">
+              <option value="">Select an option</option>
+              <option value="1-to-1 Personal Training">1-to-1 Personal Training</option>
+              <option value="Strength Training">Strength Training</option>
+              <option value="Fat Loss Support">Fat Loss Support</option>
+              <option value="Beginner-Friendly Coaching">Beginner-Friendly Coaching</option>
+              <option value="General Fitness Guidance">General Fitness Guidance</option>
+            </select>
+
+            <label for="preferred-day">Preferred Day / Time</label>
+            <input type="text" id="preferred-day" name="preferred-day" placeholder="Example: Monday evenings">
+
+            <label for="booking-message">Goals / Message</label>
+            <textarea id="booking-message" name="booking-message" rows="6" placeholder="Tell us a little about your goals"></textarea>
+
+            <button type="submit" class="btn">Submit Booking Request</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Adrian Jaskiewicz Personal Training</p>
+    <p>Follow on Instagram</p>
+  </footer>
+
+</body>
+</html>
