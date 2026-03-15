@@ -91,10 +91,10 @@ nav a:hover{
   padding:120px 0;
   background:
     linear-gradient(rgba(10,10,14,0.72), rgba(10,10,14,0.82)),
-    url("images/gym-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+    url("images/gym.webp");
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
 }
 
 .hero-grid{
