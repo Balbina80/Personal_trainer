@@ -44,22 +44,22 @@ background:#0f0f10;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0;
+padding:15px 0;
+}
+
+.logo-link{
+  display:inline-flex;
+  align-items:center;
 }
 
 .logo{
-  font-size:20px;
-  font-weight:700;
-  color:#60a5fa;
+  height:120px;
+  width:auto;
+  display:block;
 }
 
-.logo a{
-  color:#60a5fa;
-  text-decoration:none;
-}
-
-.logo a:hover{
-  color:#818cf8;
+.logo-link:hover{
+  opacity:0.95;
 }
 
 nav ul{
