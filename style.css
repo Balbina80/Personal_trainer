@@ -35,9 +35,13 @@ body {
 
 /* HEADER */
 
-.header {
-  border-bottom: 1px solid var(--border);
-  background: #0f0f10;
+.header{
+  border-bottom:1px solid var(--border);
+  background:#0f0f10;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 8px 25px rgba(0,0,0,0.35);
 }
 
 .nav {
@@ -476,3 +480,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
