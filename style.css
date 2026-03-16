@@ -35,20 +35,22 @@ body {
 
 /* HEADER */
 
-.header{
-  border-bottom:1px solid var(--border);
-  background:#0f0f10;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 8px 25px rgba(0,0,0,0.35);
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 16, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 8px 0;
 }
 
 .logo-link {
@@ -57,7 +59,7 @@ body {
 }
 
 .logo {
-  height: 120px;
+  height: 72px;
   width: auto;
   display: block;
 }
@@ -78,7 +80,7 @@ nav a {
   color: var(--white);
   font-weight: 700;
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  padding: 12px 22px;
+  padding: 10px 18px;
   border-radius: 999px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
