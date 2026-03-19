@@ -372,6 +372,21 @@ nav a:hover {
   margin-bottom: 12px;
 }
 
+.contact-info a {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.6);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #c4b5fd;
+  border-bottom-color: #c4b5fd;
+}
+
+.contact-info p {
+  line-height: 1.8;
+}
+
 .contact-note {
   margin-top: 18px;
 }
