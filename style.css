@@ -97,7 +97,7 @@ nav a:hover {
   padding: 120px 0;
   background:
     linear-gradient(rgba(10, 10, 14, 0.72), rgba(10, 10, 14, 0.82)),
-    url("images/gym.webp");
+    url("images/Gym_2.jpg");
   background-size: cover;
   background-position: center 10%;
   background-repeat: no-repeat;
@@ -316,12 +316,35 @@ nav a:hover {
 .videos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 2rem;
 }
 
-video {
+.videos video {
   width: 100%;
+  max-height: 350px;
+  object-fit: cover;
   border-radius: 12px;
+}
+
+.video-card {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-card video {
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover video {
+  transform: scale(1.05);
+}
+
+.video-card p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 /* CTA */
@@ -483,3 +506,8 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}
