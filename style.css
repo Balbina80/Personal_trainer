@@ -176,6 +176,24 @@ nav a:hover {
   color: #c4b5fd;
 }
 
+.booking-info h3,
+.booking-form-box h3 {
+  margin-bottom: 20px;
+}
+
+.booking-info p {
+  margin-bottom: 12px;
+}
+
+.booking-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.booking-list li {
+  margin-bottom: 10px;
+}
+
 /* BUTTON */
 
 .btn {
