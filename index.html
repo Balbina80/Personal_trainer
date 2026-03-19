@@ -63,31 +63,33 @@
     </div>
   </section>
 
-  <section class="why-train">
-    <div class="container">
-      <h2>Why Train With Adrian</h2>
-      <p class="why-intro">
-        A supportive and structured coaching approach designed to help you build strength, confidence and consistency.
-      </p>
+<section class="why-train reveal">
+  <div class="container">
 
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>Personalised Coaching</h3>
-          <p>Every session is tailored to your goals, fitness level and training experience.</p>
-        </div>
+    <h2 class="fade-up">Why Train With Adrian</h2>
+    <p class="why-intro fade-up delay-1">
+      A supportive and structured coaching approach designed to help you build strength, confidence and consistency.
+    </p>
 
-        <div class="why-card">
-          <h3>Technique & Strength</h3>
-          <p>Learn proper form, improve performance and build confidence in the gym.</p>
-        </div>
+    <div class="why-grid">
+      <div class="why-card reveal-card">
+        <h3>Personalised Coaching</h3>
+        <p>Every session is tailored to your goals, fitness level and training experience.</p>
+      </div>
 
-        <div class="why-card">
-          <h3>Support & Consistency</h3>
-          <p>Stay motivated with structured sessions, guidance and realistic long-term progress.</p>
-        </div>
+      <div class="why-card reveal-card">
+        <h3>Technique & Strength</h3>
+        <p>Learn proper form, improve performance and build confidence in the gym.</p>
+      </div>
+
+      <div class="why-card reveal-card">
+        <h3>Support & Consistency</h3>
+        <p>Stay motivated with structured sessions, guidance and realistic long-term progress.</p>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <section class="gallery">
     <div class="container">
@@ -127,6 +129,22 @@
       <img src="images/instagram.png" alt="Instagram">
     </a>
   </footer>
+
+<script>
+  const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  revealElements.forEach((el) => observer.observe(el));
+</script>
 
 </body>
 </html>
