@@ -478,6 +478,7 @@ footer {
   .hero-text h2 {
     font-size: 40px;
   }
+}
 
 
 @media (max-width: 768px) {
@@ -485,9 +486,9 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-}
 
 /* REVEAL ANIMATIONS */
+
 .fade-up,
 .reveal-card {
   opacity: 0;
@@ -545,24 +546,19 @@ footer {
 }
 
 /* gradient border glow */
+
 .why-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 1px;
   border-radius: 18px;
   background: linear-gradient(
     135deg,
-    rgba(124, 58, 237, 0.7),
-    rgba(59, 130, 246, 0.45),
-    rgba(124, 58, 237, 0.7)
+    rgba(124, 58, 237, 0.5),
+    rgba(59, 130, 246, 0.3)
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+  transition: 0.3s;
 }
 
 .why-card:hover::before {
@@ -586,7 +582,8 @@ footer {
   transition: color 0.3s ease;
 }
 
-/* mikro animacje tekstu */
+/* mikro animations*/
+
 .why-card:hover h3 {
   transform: translateX(4px);
   color: #ffffff;
