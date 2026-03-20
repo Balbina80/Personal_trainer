@@ -439,8 +439,10 @@ nav a:hover {
   line-height: 1.8;
 }
 
-.contact-note {
-  margin-top: 18px;
+.contact-info p,
+.booking-info p {
+  margin-bottom: 12px;
+  line-height: 1.8;
 }
 
 .booking-list {
