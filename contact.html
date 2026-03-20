@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Adrian Jaśkiewicz Personal Trainer</title>
+  <meta
+    name="description"
+    content="Get in touch with Adrian Jaśkiewicz Personal Trainer to ask questions or enquire about personal training sessions."
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container nav">
-      <a href="index.html" class="logo-link">
-    <img src="images/aj-fitness-logo.png" alt="AJ Fitness Personal Training" class="logo">
-        </a>
+      <a href="index.html" class="logo-link" aria-label="Go to homepage">
+        <img src="images/aj-fitness-logo.png" alt="AJ Fitness Personal Training logo" class="logo">
+      </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="bookings.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -27,7 +31,7 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <p>Get in touch to ask a question or find out more about personal training sessions.</p>
       </div>
     </section>
@@ -36,10 +40,15 @@
       <div class="container contact-grid">
 
         <div class="contact-info">
-          <h3>Contact Details</h3>
-          <p><strong>Phone:</strong> 07306 803636</p>
-          <p><strong>Email:</strong> adrian.k2004@outlook.com</p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/adrianj.pt" target="_blank">@adrianj.pt</a></p>
+          <h2>Contact Details</h2>
+          <p><strong>Phone:</strong> <a href="tel:07306803636">07306 803636</a></p>
+          <p><strong>Email:</strong> <a href="mailto:adrian.k2004@outlook.com">adrian.k2004@outlook.com</a></p>
+          <p>
+            <strong>Instagram:</strong>
+            <a href="https://www.instagram.com/adrianj.pt" target="_blank" rel="noopener noreferrer">
+              @adrianj.pt
+            </a>
+          </p>
           <p><strong>Location:</strong> Northampton</p>
 
           <div class="contact-note">
@@ -51,20 +60,20 @@
         </div>
 
         <div class="contact-form-box">
-          <h3>Send a Message</h3>
+          <h2>Send a Message</h2>
 
           <form class="contact-form">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Your email">
+            <input type="email" id="email" name="email" placeholder="Your email" required>
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Your phone number">
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Write your message here"></textarea>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
 
             <button type="submit" class="btn">Send Message</button>
           </form>
@@ -74,15 +83,19 @@
     </section>
   </main>
 
-<footer>
+  <footer>
+    <p>&copy; 2026 Adrian Jaśkiewicz Personal Training</p>
 
-  <p>© 2026 Adrian Jaśkiewicz Personal Training</p>
+    <a
+      href="https://www.instagram.com/adrianj.pt"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="instagram-icon"
+      aria-label="Visit Adrian's Instagram profile"
+    >
+      <img src="images/instagram.png" alt="Instagram icon">
+    </a>
+  </footer>
 
-<a href="https://www.instagram.com/adrianj.pt"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="instagram-icon">
-
-</footer>
 </body>
 </html>

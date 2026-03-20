@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking | Adrian Jaśkiewicz Personal Trainer</title>
+  <meta
+    name="description"
+    content="Book a personal training session with Adrian Jaśkiewicz and take the first step towards your fitness goals."
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container nav">
-      <a href="index.html" class="logo-link">
-    <img src="images/aj-fitness-logo.png" alt="AJ Fitness Personal Training" class="logo">
-    </a>
+      <a href="index.html" class="logo-link" aria-label="Go to homepage">
+        <img src="images/aj-fitness-logo.png" alt="AJ Fitness Personal Training logo" class="logo">
+      </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="bookings.html">Booking</a></li>
+          <li><a href="bookings.html" aria-current="page">Booking</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -27,7 +31,7 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h2>Book a Session</h2>
+        <h1>Book a Session</h1>
         <p>Book your training session and take the first step towards your fitness goals.</p>
       </div>
     </section>
@@ -36,7 +40,7 @@
       <div class="container booking-grid">
 
         <div class="booking-info">
-          <h3>Goals Options</h3>
+          <h2>Training Options</h2>
           <p>Choose the type of support you are interested in:</p>
 
           <ul class="booking-list">
@@ -54,20 +58,20 @@
         </div>
 
         <div class="booking-form-box">
-          <h3>Booking Form</h3>
+          <h2>Booking Form</h2>
 
           <form class="booking-form">
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Your name">
+            <input type="text" id="full-name" name="full-name" placeholder="Your name" required>
 
             <label for="email-booking">Email Address</label>
-            <input type="email" id="email-booking" name="email-booking" placeholder="Your email">
+            <input type="email" id="email-booking" name="email-booking" placeholder="Your email" required>
 
             <label for="phone-booking">Phone Number</label>
             <input type="tel" id="phone-booking" name="phone-booking" placeholder="Your phone number">
 
             <label for="training-type">Your Goals</label>
-            <select id="training-type" name="training-type">
+            <select id="training-type" name="training-type" required>
               <option value="">Select an option</option>
               <option value="1-to-1 Personal Training">1-to-1 Personal Training</option>
               <option value="Strength Training">Strength Training</option>
@@ -80,7 +84,7 @@
             <input type="text" id="preferred-day" name="preferred-day" placeholder="Example: Monday evenings">
 
             <label for="booking-message">Goals / Message</label>
-            <textarea id="booking-message" name="booking-message" rows="6" placeholder="Tell us a little about your goals"></textarea>
+            <textarea id="booking-message" name="booking-message" rows="6" placeholder="Tell us a little about your goals" required></textarea>
 
             <button type="submit" class="btn">Submit Booking Request</button>
           </form>
@@ -91,14 +95,18 @@
   </main>
 
   <footer>
+    <p>&copy; 2026 Adrian Jaśkiewicz Personal Training</p>
 
-  <p>© 2026 Adrian Jaśkiewicz Personal Training</p>
+    <a
+      href="https://www.instagram.com/adrianj.pt"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="instagram-icon"
+      aria-label="Visit Adrian's Instagram profile"
+    >
+      <img src="images/instagram.png" alt="Instagram icon">
+    </a>
+  </footer>
 
-  <a href="https://www.instagram.com/adrianj.pt"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="instagram-icon">
-
-</footer>
 </body>
 </html>
