@@ -135,7 +135,7 @@ nav a[aria-current="page"] {
   align-items: center;
   background:
     linear-gradient(rgba(10, 10, 14, 0.72), rgba(10, 10, 14, 0.82)),
-    url("images/Gym_2.jpg");
+    url("Images/Gym_2.jpg");
   background-size: cover;
   background-position: center 45%;
   background-repeat: no-repeat;
