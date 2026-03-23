@@ -535,6 +535,18 @@ footer p {
   transform: scale(1.2);
 }
 
+.footer-credit {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.footer-credit:hover {
+  color: #ff4d6d;
+}
+
 /* REVEAL ANIMATIONS */
 
 .fade-up,
