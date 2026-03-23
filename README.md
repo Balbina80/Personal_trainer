@@ -70,7 +70,7 @@ It demonstrates front-end development skills, including layout design, responsiv
 ## 👩‍💻 Author
 
 Created by Barbara Jaskiewicz  
-Frontend Developer (in progress 🚀)
+Web Design & Freelancer Social Media
 
 ---
 
