@@ -424,6 +424,12 @@ nav a[aria-current="page"] {
   margin-bottom: 28px;
 }
 
+.cta-note {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #b6b6c2;
+}
+
 /* CONTACT + BOOKING */
 
 .contact-section,
@@ -701,3 +707,30 @@ footer p {
   }
 }
 
+.testimonial {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: #c4b5fd;
+  font-weight: 600;
+}
