@@ -10,6 +10,8 @@
   --white: #ffffff;
   --radius: 18px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.22);
+  --max-width: 1200px;
 }
 
 * {
@@ -40,8 +42,7 @@ main {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: min(90%, var(--max-width));
   margin: 0 auto;
 }
 
@@ -76,13 +77,13 @@ main {
 }
 
 .logo {
-  height: 120px;
+  height: 110px;
   width: auto;
 }
 
 nav ul {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   list-style: none;
 }
 
@@ -104,14 +105,14 @@ nav a:hover {
 }
 
 nav a[aria-current="page"] {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
 }
 
 /* BUTTON */
 
 .btn {
   display: inline-block;
-  background: var(--accent);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: var(--white);
   padding: 14px 28px;
   border-radius: 999px;
@@ -119,12 +120,13 @@ nav a[aria-current="page"] {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.25);
 }
 
 .btn:hover {
-  background: var(--accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(124, 58, 237, 0.32);
 }
 
 /* HERO */
@@ -134,7 +136,7 @@ nav a[aria-current="page"] {
   display: flex;
   align-items: center;
   background:
-    linear-gradient(rgba(10, 10, 14, 0.72), rgba(10, 10, 14, 0.82)),
+    linear-gradient(rgba(10, 10, 14, 0.72), rgba(10, 10, 14, 0.84)),
     url("Images/Gym_2.jpg");
   background-size: cover;
   background-position: center 45%;
@@ -149,9 +151,10 @@ nav a[aria-current="page"] {
 }
 
 .hero-text h1 {
-  font-size: 64px;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   margin-bottom: 20px;
   line-height: 1.05;
+  max-width: 700px;
 }
 
 .hero-text p {
@@ -185,7 +188,7 @@ nav a[aria-current="page"] {
 }
 
 .hero-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow: 0 26px 50px rgba(79, 70, 229, 0.22);
 }
 
@@ -197,7 +200,7 @@ nav a[aria-current="page"] {
 
 .page-hero h1,
 .page-hero h2 {
-  font-size: 48px;
+  font-size: clamp(2.2rem, 4vw, 3rem);
   margin-bottom: 12px;
   line-height: 1.15;
 }
@@ -205,6 +208,7 @@ nav a[aria-current="page"] {
 .page-hero p {
   color: var(--muted);
   max-width: 760px;
+  font-size: 1.05rem;
 }
 
 /* ABOUT */
@@ -245,19 +249,20 @@ nav a[aria-current="page"] {
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
-  transform: scale(1.15);
+  transform: scale(1.1);
   transition: transform 0.3s ease;
   border: 3px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .about-image img:hover {
-  transform: scale(1.25);
+  transform: scale(1.18);
 }
 
-/* WHY TRAIN */
+/* WHY TRAIN + BENEFITS */
 
-.why-train {
+.why-train,
+.benefits {
   padding: 100px 0;
   background: radial-gradient(
     circle at top,
@@ -266,7 +271,12 @@ nav a[aria-current="page"] {
   );
 }
 
-.why-train h2 {
+.benefits {
+  background: none;
+}
+
+.why-train h2,
+.benefits h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 32px;
@@ -294,6 +304,7 @@ nav a[aria-current="page"] {
   padding: 2rem;
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: var(--shadow-soft);
 }
 
 .why-card::before {
@@ -303,8 +314,8 @@ nav a[aria-current="page"] {
   border-radius: 18px;
   background: linear-gradient(
     135deg,
-    rgba(124, 58, 237, 0.5),
-    rgba(59, 130, 246, 0.3)
+    rgba(124, 58, 237, 0.34),
+    rgba(59, 130, 246, 0.2)
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -316,7 +327,7 @@ nav a[aria-current="page"] {
 }
 
 .why-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px) scale(1.01);
   border-color: rgba(124, 58, 237, 0.45);
   box-shadow: 0 20px 50px rgba(124, 58, 237, 0.18);
 }
@@ -363,7 +374,10 @@ nav a[aria-current="page"] {
 
 .video-card {
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .video-card figure {
@@ -379,13 +393,13 @@ nav a[aria-current="page"] {
 }
 
 .video-card:hover video {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .video-card figcaption {
-  margin-top: 10px;
+  margin-top: 12px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #ccc;
 }
 
@@ -396,9 +410,18 @@ nav a[aria-current="page"] {
   text-align: center;
 }
 
+.cta .container {
+  max-width: 760px;
+}
+
 .cta h2 {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-size: 34px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 28px;
 }
 
 /* CONTACT + BOOKING */
@@ -440,6 +463,12 @@ nav a[aria-current="page"] {
 .booking-info p {
   margin-bottom: 12px;
   line-height: 1.8;
+  color: var(--muted);
+}
+
+.contact-info strong,
+.booking-info strong {
+  color: var(--white);
 }
 
 .contact-info a,
@@ -467,6 +496,7 @@ nav a[aria-current="page"] {
 
 .booking-list li {
   margin-bottom: 10px;
+  color: var(--muted);
 }
 
 /* FORM */
@@ -481,14 +511,20 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: 12px;
+  padding: 13px 14px;
   margin-top: 5px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid var(--border);
   background: #111;
   color: var(--white);
   font: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8e8e98;
 }
 
 input:focus,
@@ -496,7 +532,8 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: #7c3aed;
-  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.18);
+  background: #141418;
 }
 
 textarea {
@@ -512,7 +549,6 @@ footer {
   border-top: 1px solid var(--border);
   margin-top: 80px;
   color: var(--muted);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -537,7 +573,7 @@ footer p {
 }
 
 .instagram-icon img:hover {
-  transform: scale(1.2);
+  transform: scale(1.16);
 }
 
 .footer-credit {
@@ -550,7 +586,7 @@ footer p {
 }
 
 .footer-credit:hover {
-  color: #ff4d6d;
+  color: #c4b5fd;
 }
 
 /* REVEAL ANIMATIONS */
@@ -628,7 +664,7 @@ footer p {
   }
 
   .logo {
-    height: 95px;
+    height: 90px;
   }
 
   .hero-text h1 {
@@ -637,11 +673,12 @@ footer p {
 
   .page-hero h1,
   .page-hero h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .about h2,
   .why-train h2,
+  .benefits h2,
   .gallery h2,
   .cta h2,
   .contact-info h2,
@@ -653,6 +690,14 @@ footer p {
 
   .cta h2 {
     font-size: 28px;
+  }
+
+  .contact-info,
+  .booking-info,
+  .contact-form-box,
+  .booking-form-box,
+  .why-card {
+    padding: 24px;
   }
 }
 
