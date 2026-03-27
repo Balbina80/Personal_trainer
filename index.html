@@ -18,7 +18,13 @@
         <img src="Images/aj-fitness-logo.png" alt="AJ Fitness Personal Training logo" class="logo">
       </a>
 
-      <nav aria-label="Main navigation">
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="bookings.html">Booking</a></li>
@@ -76,23 +82,23 @@
       </div>
     </section>
 
-<section class="testimonial">
-  <div class="container">
-    <h2>Client Feedback</h2>
+    <section class="testimonial">
+      <div class="container">
+        <h2>Client Feedback</h2>
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        "Training with Adrian has completely changed my confidence in the gym. 
-        I feel stronger, more motivated and finally understand what I'm doing. 
-        Every session is structured and supportive."
-      </p>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Training with Adrian has completely changed my confidence in the gym.
+            I feel stronger, more motivated and finally understand what I'm doing.
+            Every session is structured and supportive."
+          </p>
 
-      <p class="testimonial-author">
-        - Bella, Client  
-      </p>
-    </div>
-  </div>
-</section>
+          <p class="testimonial-author">
+            - Bella, Client
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="why-train">
       <div class="container">
@@ -172,11 +178,10 @@
 
     <section class="cta">
       <div class="container fade-up">
-
         <h2>Start Your Training With Confidence</h2>
 
         <p>
-          Take the first step towards building strength, improving your fitness 
+          Take the first step towards building strength, improving your fitness
           and feeling more confident in the gym with personalised 1-to-1 coaching.
         </p>
 
@@ -187,7 +192,6 @@
         </p>
       </div>
     </section>
-    
   </main>
 
   <footer>
@@ -223,6 +227,17 @@
     });
 
     revealElements.forEach((el) => observer.observe(el));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+
+    menuToggle.addEventListener("click", () => {
+      siteNav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
   </script>
 
 </body>
