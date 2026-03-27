@@ -212,33 +212,50 @@
     </p>
   </footer>
 
-  <script>
-    const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
+ <script>
+  const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.15
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    threshold: 0.15
+  });
 
-    revealElements.forEach((el) => observer.observe(el));
+  revealElements.forEach((el) => observer.observe(el));
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNav = document.querySelector(".site-nav");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteNav = document.querySelector(".site-nav");
+  const navLinks = document.querySelectorAll(".site-nav a");
 
-    menuToggle.addEventListener("click", () => {
-      siteNav.classList.toggle("active");
-      menuToggle.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
+    siteNav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
 
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", !isExpanded);
+  });
+  
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
     });
-  </script>
+  });
 
-</body>
-</html>
+  document.addEventListener("click", (e) => {
+    const isClickInsideNav = siteNav.contains(e.target);
+    const isClickOnButton = menuToggle.contains(e.target);
+
+    if (!isClickInsideNav && !isClickOnButton) {
+      siteNav.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
