@@ -72,21 +72,29 @@
         <div class="contact-form-box">
           <h2>Send an Enquiry</h2>
 
-          <form class="contact-form">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          <form 
+            class="contact-form" 
+            action="https://formspree.io/f/mzdkyarv" 
+            method="POST"
+>
+          <input type="hidden" name="_subject" value="AJ Fitness - Contact Message">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="form-type" value="Contact Form">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Your email address" required>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell Adrian a little about what you would like help with" required></textarea>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number">
 
-            <button type="submit" class="btn">Send Enquiry</button>
-          </form>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell Adrian a little about what you would like help with" required></textarea>
+
+          <button type="submit" class="btn">Send Enquiry</button>
+        </form>
         </div>
 
       </div>

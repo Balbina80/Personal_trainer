@@ -78,34 +78,42 @@
         <div class="booking-form-box">
           <h2>Booking Enquiry Form</h2>
 
-          <form class="booking-form">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Your full name" required>
+          <form 
+            class="booking-form" 
+            action="https://formspree.io/f/mzdkyarv" 
+            method="POST"
+>
+          <input type="hidden" name="_subject" value="AJ Fitness - Booking Enquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="form-type" value="Booking Form">
 
-            <label for="email-booking">Email Address</label>
-            <input type="email" id="email-booking" name="email-booking" placeholder="Your email address" required>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="name" placeholder="Your full name" required>
 
-            <label for="phone-booking">Phone Number</label>
-            <input type="tel" id="phone-booking" name="phone-booking" placeholder="Your phone number">
+          <label for="email-booking">Email Address</label>
+          <input type="email" id="email-booking" name="email" placeholder="Your email address" required>
 
-            <label for="training-type">What Are Your Goals?</label>
-            <select id="training-type" name="training-type" required>
-              <option value="">Select an option</option>
-              <option value="Lose Fat">Lose Fat</option>
-              <option value="Build Strength">Build Strength</option>
-              <option value="Improve Fitness">Improve Fitness</option>
-              <option value="Build Confidence in the Gym">Build Confidence in the Gym</option>
-              <option value="General Personal Training">General Personal Training</option>
-            </select>
+          <label for="phone-booking">Phone Number</label>
+          <input type="tel" id="phone-booking" name="phone" placeholder="Your phone number">
 
-            <label for="preferred-day">Preferred Day / Time</label>
-            <input type="text" id="preferred-day" name="preferred-day" placeholder="Example: Monday evenings">
+          <label for="training-type">What Are Your Goals?</label>
+          <select id="training-type" name="goals" required>
+          <option value="">Select an option</option>
+          <option value="Lose Fat">Lose Fat</option>
+          <option value="Build Strength">Build Strength</option>
+          <option value="Improve Fitness">Improve Fitness</option>
+          <option value="Build Confidence in the Gym">Build Confidence in the Gym</option>
+          <option value="General Personal Training">General Personal Training</option>
+      </select>
 
-            <label for="booking-message">Your Message</label>
-            <textarea id="booking-message" name="booking-message" rows="6" placeholder="Tell Adrian a little about your goals and what you would like help with" required></textarea>
+          <label for="preferred-day">Preferred Day / Time</label>
+          <input type="text" id="preferred-day" name="availability" placeholder="Example: Monday evenings">
 
-            <button type="submit" class="btn">Submit Booking Enquiry</button>
-          </form>
+          <label for="booking-message">Your Message</label>
+          <textarea id="booking-message" name="message" rows="6" placeholder="Tell Adrian a little about your goals and what you would like help with" required></textarea>
+
+          <button type="submit" class="btn">Submit Booking Enquiry</button>
+      </form>
         </div>
 
       </div>
