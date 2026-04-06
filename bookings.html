@@ -35,12 +35,13 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Book Your First Session</h1>
+    <section class="page-hero page-hero-premium">
+      <div class="container fade-up">
+        <p class="section-tag">Book your session</p>
+        <h1>Start With a Session Built Around You</h1>
         <p>
-          Take the first step towards getting stronger, fitter and more confident
-          with personalised 1-to-1 training tailored to your goals.
+          Whether your goal is fat loss, strength, better fitness or confidence in the gym,
+          this is your first step towards a more structured approach.
         </p>
       </div>
     </section>
@@ -48,72 +49,62 @@
     <section class="booking-section">
       <div class="container booking-grid">
 
-        <div class="booking-info">
-          <h2>1-to-1 Personal Training</h2>
+        <div class="booking-info fade-up">
+          <h2>What to Expect</h2>
 
           <p>
-            Every session is tailored to your individual goals, whether you want to
-            lose fat, build strength, improve your fitness or simply feel more
-            confident in the gym.
+            Your enquiry helps Adrian understand your current level, goals and availability
+            so he can recommend the best way to get started.
           </p>
 
-          <ul class="booking-list">
-            <li>Personalised training approach</li>
-            <li>1-to-1 guidance and support</li>
-            <li>Focus on correct technique</li>
-            <li>Progress tracking and motivation</li>
+          <ul class="booking-list premium-list">
+            <li>1-to-1 coaching tailored to your level</li>
+            <li>Support with confidence, consistency and form</li>
+            <li>Sessions designed around clear progress</li>
+            <li>A more focused and personal gym experience</li>
           </ul>
 
-          <p>
-            Sessions are suitable for all levels, from complete beginners to more
-            experienced clients.
-          </p>
-
-          <p>
-            Once your enquiry is submitted, Adrian will get in touch to discuss your
-            goals, availability and the best way to get started.
-          </p>
+          <div class="info-panel">
+            <h3>Ideal for:</h3>
+            <p>Beginners, people returning to training, and anyone wanting a more structured approach.</p>
+          </div>
         </div>
 
-        <div class="booking-form-box">
+        <div class="booking-form-box fade-up delay-1">
           <h2>Booking Enquiry Form</h2>
 
-          <form 
-            class="booking-form" 
-            action="https://formspree.io/f/mzdkyarv" 
-            method="POST"
->
-          <input type="hidden" name="_subject" value="AJ Fitness - Booking Enquiry">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="form-type" value="Booking Form">
+          <form class="booking-form" action="https://formspree.io/f/mzdkyarv" method="POST">
+            <input type="hidden" name="_subject" value="AJ Fitness - Booking Enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="form-type" value="Booking Form">
 
-          <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" name="name" placeholder="Your full name" required>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="name" placeholder="Your full name" required>
 
-          <label for="email-booking">Email Address</label>
-          <input type="email" id="email-booking" name="email" placeholder="Your email address" required>
+            <label for="email-booking">Email Address</label>
+            <input type="email" id="email-booking" name="email" placeholder="Your email address" required>
 
-          <label for="phone-booking">Phone Number</label>
-          <input type="tel" id="phone-booking" name="phone" placeholder="Your phone number">
+            <label for="phone-booking">Phone Number</label>
+            <input type="tel" id="phone-booking" name="phone" placeholder="Your phone number">
 
-          <label for="training-type">What Are Your Goals?</label>
-          <select id="training-type" name="goals" required>
-          <option value="">Select an option</option>
-          <option value="Lose Fat">Lose Fat</option>
-          <option value="Build Strength">Build Strength</option>
-          <option value="Improve Fitness">Improve Fitness</option>
-          <option value="Build Confidence in the Gym">Build Confidence in the Gym</option>
-          <option value="General Personal Training">General Personal Training</option>
-      </select>
+            <label for="training-type">What Are Your Goals?</label>
+            <select id="training-type" name="goals" required>
+              <option value="">Select an option</option>
+              <option value="Lose Fat">Lose Fat</option>
+              <option value="Build Strength">Build Strength</option>
+              <option value="Improve Fitness">Improve Fitness</option>
+              <option value="Build Confidence in the Gym">Build Confidence in the Gym</option>
+              <option value="General Personal Training">General Personal Training</option>
+            </select>
 
-          <label for="preferred-day">Preferred Day / Time</label>
-          <input type="text" id="preferred-day" name="availability" placeholder="Example: Monday evenings">
+            <label for="preferred-day">Preferred Day / Time</label>
+            <input type="text" id="preferred-day" name="availability" placeholder="Example: Monday evenings">
 
-          <label for="booking-message">Your Message</label>
-          <textarea id="booking-message" name="message" rows="6" placeholder="Tell Adrian a little about your goals and what you would like help with" required></textarea>
+            <label for="booking-message">Your Message</label>
+            <textarea id="booking-message" name="message" rows="6" placeholder="Tell Adrian a little about your goals and what you would like help with" required></textarea>
 
-          <button type="submit" class="btn">Submit Booking Enquiry</button>
-      </form>
+            <button type="submit" class="btn btn-full">Submit Booking Enquiry</button>
+          </form>
         </div>
 
       </div>
@@ -138,50 +129,52 @@
     </p>
   </footer>
 
-   <script>
-  const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
+  <script>
+    const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+    const navLinks = document.querySelectorAll(".site-nav a");
+
+    menuToggle.addEventListener("click", () => {
+      siteNav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const isClickInsideNav = siteNav.contains(e.target);
+      const isClickOnButton = menuToggle.contains(e.target);
+
+      if (!isClickInsideNav && !isClickOnButton) {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
-  }, {
-    threshold: 0.15
-  });
-
-  revealElements.forEach((el) => observer.observe(el));
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const siteNav = document.querySelector(".site-nav");
-  const navLinks = document.querySelectorAll(".site-nav a");
-
-  menuToggle.addEventListener("click", () => {
-    siteNav.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !isExpanded);
-  });
-  
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("active");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const isClickInsideNav = siteNav.contains(e.target);
-    const isClickOnButton = menuToggle.contains(e.target);
-
-    if (!isClickInsideNav && !isClickOnButton) {
-      siteNav.classList.remove("active");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-</script>
+  </script>
+</body>
+</html>

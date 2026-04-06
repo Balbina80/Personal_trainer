@@ -35,12 +35,12 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Get in Touch</h1>
+    <section class="page-hero page-hero-premium">
+      <div class="container fade-up">
+        <p class="section-tag">Contact</p>
+        <h1>Get in Touch About Your Training Goals</h1>
         <p>
-          Have a question or want to find out more about 1-to-1 personal training?
-          Get in touch and Adrian will be happy to help.
+          Have a question before booking? Send a message and Adrian will get back to you.
         </p>
       </div>
     </section>
@@ -48,7 +48,7 @@
     <section class="contact-section">
       <div class="container contact-grid">
 
-        <div class="contact-info">
+        <div class="contact-info fade-up">
           <h2>Contact Details</h2>
 
           <p><strong>Phone:</strong> <a href="tel:07306803636">07306 803636</a></p>
@@ -61,40 +61,37 @@
           </p>
           <p><strong>Location:</strong> Northampton</p>
 
-          <div class="contact-note">
+          <div class="contact-note info-panel">
+            <h3>Questions about training?</h3>
             <p>
-              Whether you are new to the gym or looking to improve your strength,
-              fitness and confidence, feel free to get in touch to discuss your goals.
+              Whether you are starting from scratch or want a more focused approach,
+              feel free to get in touch.
             </p>
           </div>
         </div>
 
-        <div class="contact-form-box">
+        <div class="contact-form-box fade-up delay-1">
           <h2>Send an Enquiry</h2>
 
-          <form 
-            class="contact-form" 
-            action="https://formspree.io/f/mzdkyarv" 
-            method="POST"
->
-          <input type="hidden" name="_subject" value="AJ Fitness - Contact Message">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="form-type" value="Contact Form">
+          <form class="contact-form" action="https://formspree.io/f/mzdkyarv" method="POST">
+            <input type="hidden" name="_subject" value="AJ Fitness - Contact Message">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="form-type" value="Contact Form">
 
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Your email address" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Tell Adrian a little about what you would like help with" required></textarea>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell Adrian a little about what you would like help with" required></textarea>
 
-          <button type="submit" class="btn">Send Enquiry</button>
-        </form>
+            <button type="submit" class="btn btn-full">Send Enquiry</button>
+          </form>
         </div>
 
       </div>
@@ -120,49 +117,51 @@
   </footer>
 
   <script>
-  const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
+    const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+    const navLinks = document.querySelectorAll(".site-nav a");
+
+    menuToggle.addEventListener("click", () => {
+      siteNav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const isClickInsideNav = siteNav.contains(e.target);
+      const isClickOnButton = menuToggle.contains(e.target);
+
+      if (!isClickInsideNav && !isClickOnButton) {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
-  }, {
-    threshold: 0.15
-  });
-
-  revealElements.forEach((el) => observer.observe(el));
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const siteNav = document.querySelector(".site-nav");
-  const navLinks = document.querySelectorAll(".site-nav a");
-
-  menuToggle.addEventListener("click", () => {
-    siteNav.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !isExpanded);
-  });
-  
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("active");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const isClickInsideNav = siteNav.contains(e.target);
-    const isClickOnButton = menuToggle.contains(e.target);
-
-    if (!isClickInsideNav && !isClickOnButton) {
-      siteNav.classList.remove("active");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-</script>
+  </script>
+</body>
+</html>
