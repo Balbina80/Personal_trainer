@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Book Personal Training in Northampton | AJ Fitness</title>
+  <title>Book Personal Training in Northampton | 1-to-1 Coaching | AJ Fitness</title>
 
   <meta
     name="description"
-    content="Book personal training in Northampton with AJ Fitness. Start 1-to-1 coaching tailored to your goals, fitness level and lifestyle."
+    content="Book personal training in Northampton with AJ Fitness. Start 1-to-1 coaching tailored to your goals, fitness level and lifestyle with structured support and a clear next step."
   >
 
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="BJ Studio">
   <link rel="canonical" href="https://ajfitness.uk/bookings.html">
 
@@ -25,6 +25,7 @@
   <meta property="og:url" content="https://ajfitness.uk/bookings.html">
   <meta property="og:image" content="https://ajfitness.uk/Images/home-pic.jpg">
   <meta property="og:site_name" content="AJ Fitness">
+  <meta property="og:locale" content="en_GB">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -36,6 +37,46 @@
   <meta name="twitter:image" content="https://ajfitness.uk/Images/home-pic.jpg">
 
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "Book Personal Training in Northampton",
+        "url": "https://ajfitness.uk/bookings.html",
+        "description": "Booking page for 1-to-1 personal training in Northampton with AJ Fitness."
+      },
+      {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ajfitness.uk/bookings.html"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Personal Training Booking Enquiry"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "AJ Fitness",
+        "url": "https://ajfitness.uk/",
+        "telephone": "07306803636",
+        "email": "adrian.j.fitness04@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Northampton",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.instagram.com/adrianj.pt"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -171,6 +212,13 @@
           training tailored to your level, your goals and your availability, helping you build
           progress in a way that feels realistic and sustainable.
         </p>
+        <p>
+          Before booking, you can also visit our
+          <a href="personal-trainer-northampton.html">personal trainer in Northampton</a>,
+          <a href="fat-loss-northampton.html">fat loss coaching</a> or
+          <a href="beginner-gym-northampton.html">beginner gym coaching</a>
+          pages to find the best fit for your goals.
+        </p>
       </div>
     </section>
   </main>
@@ -192,6 +240,9 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="bookings.html">Booking</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="personal-trainer-northampton.html">Personal Trainer Northampton</a></li>
+          <li><a href="fat-loss-northampton.html">Fat Loss Northampton</a></li>
+          <li><a href="beginner-gym-northampton.html">Beginner Gym Northampton</a></li>
         </ul>
       </div>
 
@@ -255,32 +306,34 @@
     const siteNav = document.querySelector(".site-nav");
     const navLinks = document.querySelectorAll(".site-nav a");
 
-    menuToggle.addEventListener("click", () => {
-      siteNav.classList.toggle("active");
-      menuToggle.classList.toggle("active");
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener("click", () => {
+        siteNav.classList.toggle("active");
+        menuToggle.classList.toggle("active");
 
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        siteNav.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
       });
-    });
 
-    document.addEventListener("click", (e) => {
-      const isClickInsideNav = siteNav.contains(e.target);
-      const isClickOnButton = menuToggle.contains(e.target);
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          siteNav.classList.remove("active");
+          menuToggle.classList.remove("active");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
 
-      if (!isClickInsideNav && !isClickOnButton) {
-        siteNav.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
+      document.addEventListener("click", (e) => {
+        const isClickInsideNav = siteNav.contains(e.target);
+        const isClickOnButton = menuToggle.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnButton) {
+          siteNav.classList.remove("active");
+          menuToggle.classList.remove("active");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
   </script>
 </body>
 </html>
