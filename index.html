@@ -62,6 +62,42 @@
     "description": "AJ Fitness offers premium 1-to-1 personal training in Northampton focused on strength, fitness, confidence and long-term progress."
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "VideoObject",
+        "name": "Personal Training in Northampton – Strength With Control",
+        "description": "Watch AJ Fitness personal training in Northampton focused on strength, form and confidence.",
+        "thumbnailUrl": "https://ajfitness.uk/Images/home-pic.jpg",
+        "uploadDate": "2026-04-01",
+        "contentUrl": "https://ajfitness.uk/videos/work_out_2.mp4",
+        "embedUrl": "https://ajfitness.uk/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AJ Fitness",
+          "url": "https://ajfitness.uk/"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Personal Training in Northampton – Coaching That Feels Personal",
+        "description": "AJ Fitness 1-to-1 personal training in Northampton built around your level, confidence and progress.",
+        "thumbnailUrl": "https://ajfitness.uk/Images/home-pic.jpg",
+        "uploadDate": "2026-04-01",
+        "contentUrl": "https://ajfitness.uk/videos/work_out_3.mp4",
+        "embedUrl": "https://ajfitness.uk/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AJ Fitness",
+          "url": "https://ajfitness.uk/"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -331,17 +367,18 @@
     <section class="gallery gallery-premium">
       <div class="container">
         <div class="section-heading fade-up">
-          <p class="section-tag">Training in action</p>
-          <h2>Focused Coaching. Real Effort. Real Progress.</h2>
+          <p class="section-tag">Personal Training Videos Northampton</p>
+          <h2>Watch Personal Training in Action in Northampton</h2>
           <p>
-            A closer look at the energy, structure and personal attention behind every session.
+            Explore real AJ Fitness training sessions in Northampton focused on strength, structure,
+            confidence and 1-to-1 coaching.
           </p>
         </div>
 
         <div class="videos-premium">
           <article class="video-showcase reveal-card">
             <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata">
+              <video autoplay muted loop playsinline preload="metadata" poster="Images/home-pic.jpg">
                 <source src="videos/work_out_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -357,7 +394,7 @@
 
           <article class="video-showcase reveal-card">
             <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata">
+              <video autoplay muted loop playsinline preload="metadata" poster="Images/home-pic.jpg">
                 <source src="videos/work_out_3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -469,6 +506,56 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+    const navLinks = document.querySelectorAll(".site-nav a");
+
+    menuToggle.addEventListener("click", () => {
+      siteNav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const isClickInsideNav = siteNav.contains(e.target);
+      const isClickOnButton = menuToggle.contains(e.target);
+
+      if (!isClickInsideNav && !isClickOnButton) {
+        siteNav.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>
 
   <script>
     const revealElements = document.querySelectorAll(".fade-up, .reveal-card");
