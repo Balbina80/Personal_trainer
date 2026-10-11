@@ -1755,3 +1755,10 @@ a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!i
   .footer-brand-lockup .footer-logo{height:65px!important}
   .video-hero-content{padding-left:18px!important}
 }
+
+/* AJ Fitness 2.9: original AJ artwork and legible caption directly below */
+.brand-lockup.brand-stacked{display:inline-flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;line-height:1!important;white-space:nowrap}
+.header .brand-stacked .logo{display:block!important;height:64px!important;width:auto!important;max-width:none!important;object-fit:contain!important}
+.footer-brand-lockup.brand-stacked .footer-logo{display:block!important;height:76px!important;width:auto!important;max-width:none!important;object-fit:contain!important}
+.brand-stacked .brand-caption{display:block!important;color:#fff!important;-webkit-text-fill-color:#fff!important;font-family:inherit!important;font-weight:500!important;font-size:12px!important;letter-spacing:.14em!important;line-height:1.2!important;text-align:center!important;white-space:nowrap!important}
+@media(max-width:767px){.header .brand-stacked .logo{height:52px!important}.footer-brand-lockup.brand-stacked .footer-logo{height:64px!important}.brand-stacked .brand-caption{font-size:10px!important;letter-spacing:.10em!important}}
