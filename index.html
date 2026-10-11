@@ -40,108 +40,78 @@
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://ajfitness.uk/#organization",
-        "name": "AJ Fitness",
-        "url": "https://ajfitness.uk/",
-        "logo": "https://ajfitness.uk/Images/aj-fitness-logo-white.png",
-        "image": "https://ajfitness.uk/Images/home-pic.jpg",
-        "email": "adrian.j.fitness04@gmail.com",
-        "telephone": "07306803636",
-        "sameAs": [
-          "https://www.instagram.com/adrianj.pt"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ajfitness.uk/#organization",
+      "name": "AJ Fitness",
+      "url": "https://ajfitness.uk/",
+      "logo": "https://ajfitness.uk/Images/aj-fitness-logo-white.png",
+      "image": "https://ajfitness.uk/Images/home-pic.jpg",
+      "email": "adrian.j.fitness04@gmail.com",
+      "telephone": "07306803636",
+      "sameAs": [
+        "https://www.instagram.com/adrianj.pt"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ajfitness.uk/#person",
+      "name": "Adrian Jaśkiewicz",
+      "jobTitle": "Personal Trainer",
+      "worksFor": {
+        "@id": "https://ajfitness.uk/#organization"
       },
-      {
-        "@type": "Person",
-        "@id": "https://ajfitness.uk/#person",
-        "name": "Adrian Jaśkiewicz",
-        "jobTitle": "Personal Trainer",
-        "worksFor": {
-          "@id": "https://ajfitness.uk/#organization"
+      "url": "https://ajfitness.uk/",
+      "image": "https://ajfitness.uk/Images/about_1.jpg",
+      "sameAs": [
+        "https://www.instagram.com/adrianj.pt"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ajfitness.uk/#localbusiness",
+      "name": "AJ Fitness",
+      "url": "https://ajfitness.uk/",
+      "image": "https://ajfitness.uk/Images/home-pic.jpg",
+      "telephone": "07306803636",
+      "email": "adrian.j.fitness04@gmail.com",
+      "priceRange": "££",
+      "description": "AJ Fitness offers premium 1-to-1 personal training in Northampton focused on strength, fitness, confidence and long-term progress.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Northampton",
+        "addressRegion": "Northamptonshire",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Northampton"
         },
-        "url": "https://ajfitness.uk/",
-        "image": "https://ajfitness.uk/Images/about_1.jpg",
-        "sameAs": [
-          "https://www.instagram.com/adrianj.pt"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://ajfitness.uk/#localbusiness",
-        "name": "AJ Fitness",
-        "url": "https://ajfitness.uk/",
-        "image": "https://ajfitness.uk/Images/home-pic.jpg",
-        "telephone": "07306803636",
-        "email": "adrian.j.fitness04@gmail.com",
-        "priceRange": "££",
-        "description": "AJ Fitness offers premium 1-to-1 personal training in Northampton focused on strength, fitness, confidence and long-term progress.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Northampton",
-          "addressRegion": "Northamptonshire",
-          "addressCountry": "GB"
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Northampton"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Northamptonshire"
-          }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/adrianj.pt"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://ajfitness.uk/#website",
-        "url": "https://ajfitness.uk/",
-        "name": "AJ Fitness",
-        "publisher": {
-          "@id": "https://ajfitness.uk/#organization"
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northamptonshire"
         }
-      },
-      {
-        "@type": "VideoObject",
-        "@id": "https://ajfitness.uk/#video-1",
-        "name": "Personal Training in Northampton - Strength With Control",
-        "description": "Watch AJ Fitness personal training in Northampton focused on strength, form and confidence.",
-        "thumbnailUrl": [
-          "https://ajfitness.uk/Images/home-pic.jpg"
-        ],
-        "uploadDate": "2026-04-01T12:00:00+01:00",
-        "contentUrl": "https://ajfitness.uk/videos/work_out_2.mp4",
-        "embedUrl": "https://ajfitness.uk/",
-        "publisher": {
-          "@id": "https://ajfitness.uk/#organization"
-        }
-      },
-      {
-        "@type": "VideoObject",
-        "@id": "https://ajfitness.uk/#video-2",
-        "name": "Personal Training in Northampton - Coaching That Feels Personal",
-        "description": "AJ Fitness 1-to-1 personal training in Northampton built around your level, confidence and progress.",
-        "thumbnailUrl": [
-          "https://ajfitness.uk/Images/home-pic.jpg"
-        ],
-        "uploadDate": "2026-04-01T12:00:00+01:00",
-        "contentUrl": "https://ajfitness.uk/videos/work_out_3.mp4",
-        "embedUrl": "https://ajfitness.uk/",
-        "publisher": {
-          "@id": "https://ajfitness.uk/#organization"
-        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/adrianj.pt"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ajfitness.uk/#website",
+      "url": "https://ajfitness.uk/",
+      "name": "AJ Fitness",
+      "publisher": {
+        "@id": "https://ajfitness.uk/#organization"
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {
@@ -202,58 +172,7 @@
 
   <main>
 
-    <section class="hero hero-premium">
-      <video class="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="Images/Gym_2.jpg" aria-hidden="true">
-        <source src="Images/VID-20260616-WA0000.mp4" type="video/mp4">
-      </video>
-      <div class="hero-video-shade" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-text fade-up">
-          <p class="eyebrow">AJ Fitness | 1-to-1 Coaching in Northampton</p>
-
-          <h1>1-to-1 Personal Training in Northampton for Strength, Fitness and Confidence</h1>
-
-          <p class="hero-lead">
-            Personal training in Northampton tailored to your goals, your level and your lifestyle.
-            A clear plan, proper guidance and focused support to help you build strength, improve fitness
-            and make progress that lasts.
-          </p>
-
-          <div class="hero-actions">
-            <a href="bookings.html" class="btn">Book Your First Session</a>
-            <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
-          </div>
-
-          <div class="hero-points">
-            <span>1-to-1 support</span>
-            <span>Beginner friendly</span>
-            <span>Structured coaching</span>
-          </div>
-        </div>
-
-        <div class="hero-visual fade-up delay-1">
-          <div class="hero-visual-main">
-            <img
-              src="Images/home-pic.jpg"
-              alt="Personal trainer Adrian Jaśkiewicz coaching a client in a Northampton gym"
-              loading="eager"
-            >
-          </div>
-
-          <div class="floating-card floating-card-top">
-            <strong>Personalised approach</strong>
-            <p>Sessions built around your goal, level and progress.</p>
-          </div>
-
-          <div class="floating-card floating-card-bottom">
-            <strong>Confidence through coaching</strong>
-            <p>Train with more structure, clarity and purpose.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-strip fade-up">
+<section class="stats-strip fade-up">
       <div class="container stats-grid">
         <div class="stat-card">
           <strong>Focused</strong>
@@ -270,19 +189,15 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about about-featured">
       <div class="container about-grid">
         <div class="about-image fade-up">
-          <img
-            src="Images/about_1.jpg"
-            alt="Adrian Jaśkiewicz personal trainer portrait in Northampton"
-            loading="lazy"
-          >
+          <img src="Images/home-pic.jpg" alt="Adrian Jaśkiewicz, personal trainer in Northampton" loading="eager" fetchpriority="high">
         </div>
 
         <div class="about-text fade-up delay-1">
           <p class="section-tag">Meet Adrian</p>
-          <h2>Professional Personal Training With a Personal Approach</h2>
+          <h1>Personal Training in Northampton, Built Around You</h1>
 
           <p>
             Adrian helps clients in Northampton build strength, improve fitness and feel more comfortable
@@ -300,6 +215,10 @@
             not overwhelming or random.
           </p>
 
+          <div class="hero-actions about-actions">
+            <a href="bookings.html" class="btn">Book Your First Session</a>
+            <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
+          </div>
           <div class="about-highlights">
             <div class="mini-card">
               <h3>For all levels</h3>
@@ -453,43 +372,20 @@
           <p class="section-tag">Personal Training Videos Northampton</p>
           <h2>Watch Personal Training in Action in Northampton</h2>
           <p>
-            Explore real AJ Fitness training sessions in Northampton focused on strength, structure,
+            See AJ Fitness coaching in action, focused on strength, structure,
             confidence and 1-to-1 coaching.
           </p>
         </div>
 
-        <div class="videos-premium">
-          <article class="video-showcase reveal-card">
-            <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata" poster="Images/home-pic.jpg">
-                <source src="videos/work_out_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <div class="video-overlay"></div>
-            </div>
-            <div class="video-copy">
-              <h3>Strength With Control</h3>
-              <p>
-                Sessions focused on proper form, better movement and building confidence through structured coaching.
-              </p>
-            </div>
-          </article>
-
-          <article class="video-showcase reveal-card">
-            <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata" poster="Images/home-pic.jpg">
-                <source src="videos/work_out_3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <div class="video-overlay"></div>
-            </div>
-            <div class="video-copy">
-              <h3>Coaching That Feels Personal</h3>
-              <p>
-                1-to-1 training designed around your level, your progress and the results you want to achieve.
-              </p>
-            </div>
-          </article>
+        <div class="single-training-video reveal-card">
+          <video controls playsinline preload="metadata" poster="Images/Gym_2.jpg" aria-label="AJ Fitness personal training video">
+            <source src="Images/VID-20260616-WA0000.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="single-video-footer">
+            <p>Ready to train with Adrian?</p>
+            <a class="btn" href="bookings.html">Book Your Session</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1611,3 +1611,19 @@ body { background:linear-gradient(180deg,#050505,#111 50%,#080808); }
 .hero-text h1 { text-shadow:0 3px 30px rgba(0,0,0,.65); }
 @media(max-width:767px) { .hero-premium { min-height:85vh; } .hero-video-shade { background:linear-gradient(180deg,rgba(0,0,0,.75),rgba(0,0,0,.82)); } .hero-background-video { object-position:60% center; } .logo { height:70px; max-width:100px; } }
 @media(prefers-reduced-motion:reduce) { .hero-background-video { display:none; } }
+
+/* AJ Fitness 2.1 — streamlined homepage */
+.logo {height:104px; max-width:190px; width:auto;}
+.footer-logo {max-width:180px;}
+.nav {padding:4px 0;}
+.about-featured {padding:4rem 0 5rem; scroll-margin-top:110px;}
+.about-featured .about-grid {grid-template-columns:minmax(260px,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,76px);}
+.about-featured .about-image img {width:100%;height:auto;aspect-ratio:4/5;max-height:620px;border-radius:26px;object-fit:cover;object-position:center;}
+.about-featured .about-text h1 {font-size:clamp(2.2rem,4.1vw,4.2rem);line-height:1.08;margin:14px 0 22px;}
+.about-actions {margin:26px 0;display:flex;gap:12px;flex-wrap:wrap;}
+.single-training-video {max-width:1060px;margin:0 auto;background:#151515;border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;}
+.single-training-video video {width:100%;display:block;max-height:600px;aspect-ratio:16/9;object-fit:contain;background:#080808;}
+.single-video-footer {padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.single-video-footer p {font-weight:700;font-size:1.2rem;margin:0;}
+@media(max-width:900px){.about-featured .about-grid{grid-template-columns:1fr;}.about-featured .about-image img{max-width:600px;max-height:520px;aspect-ratio:5/4;}.about-featured .about-image{justify-content:flex-start;}}
+@media(max-width:600px){.logo{height:82px;max-width:145px;}.about-featured{padding:2rem 0 3rem;}.about-featured .about-image img{aspect-ratio:4/4;}.single-video-footer{padding:18px;}.single-training-video{border-radius:16px;}}
