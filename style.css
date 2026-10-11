@@ -1723,3 +1723,19 @@ a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!i
 .footer-credit a,.footer-credit a:visited{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55);transition:border-color .2s ease;}
 .footer-credit a:hover,.footer-credit a:focus-visible{color:#fff;border-bottom-color:#fff;}
 @media(max-width:600px){.video-hero-content{padding-left:24px!important;padding-right:24px!important;}}
+
+/* AJ Fitness 2.7 - balanced premium header and hero */
+@media(min-width:768px){
+  .header .nav{min-height:100px;padding-top:4px;padding-bottom:4px}
+  .header .logo{height:112px!important;max-width:225px!important;width:auto}
+  .site-nav ul{gap:10px}
+  .site-nav a{padding:10px 17px!important;font-size:.91rem!important;font-weight:650!important}
+  .video-hero-content{max-width:var(--max-width)!important;width:min(92%,var(--max-width))!important;padding-left:clamp(8px,1.3vw,24px)!important;padding-right:clamp(8px,1.3vw,24px)!important}
+  .video-hero-content h1{font-size:clamp(2rem,3.3vw,3.15rem)!important;max-width:640px!important;line-height:1.13!important}
+  .video-hero-content .section-tag{font-size:.82rem;letter-spacing:.14em}
+}
+@media(max-width:767px){
+  .header .logo{height:85px!important;max-width:170px!important}
+  .video-hero-content{padding-left:24px!important;padding-right:24px!important}
+  .video-hero-content h1{font-size:clamp(1.9rem,7.5vw,2.65rem)!important}
+}
