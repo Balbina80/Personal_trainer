@@ -1681,3 +1681,20 @@ a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!i
 @media(max-width:900px){.cinematic-about {min-height:auto;padding:30px 0 38px;}.cinematic-about .about-grid{grid-template-columns:1fr;}.cinematic-about .about-image img{max-height:340px;aspect-ratio:16/9;}.cinematic-about .about-text h1{font-size:clamp(1.8rem,5vw,2.7rem);}}
 @media(max-width:600px){.nav{min-height:72px;}.logo{height:76px;max-width:145px;}.cinematic-about{padding:22px 0 32px;}.cinematic-about .about-image img{max-height:260px;aspect-ratio:4/3;}.cinematic-about .about-text h1{font-size:clamp(1.65rem,7vw,2.15rem);}.cinematic-about .about-highlights{grid-template-columns:1fr;}}
 @media(prefers-reduced-motion:reduce){.about-background-video{display:none;}.cinematic-about{background:#08090c url("Images/Gym_2.jpg") center/cover no-repeat;}}
+
+/* AJ Fitness 2.4 - full-bleed cinematic background, compact introductory panel */
+.cinematic-about {width:100%; min-height:calc(100svh - 110px); padding:20px 0 24px; background:#070707; isolation:isolate;}
+.cinematic-about .about-background-video {position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;z-index:-2!important;pointer-events:none!important;display:block;}
+.cinematic-about .about-video-overlay {position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.72)),rgba(0,0,0,.15);}
+.cinematic-about .about-grid {position:relative;z-index:1;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(20px,3vw,46px);align-items:center;}
+.cinematic-about .about-image img {height:min(56svh,440px);max-height:none;width:100%;aspect-ratio:auto;object-fit:cover;object-position:center 30%;}
+.cinematic-about .about-text h1 {font-size:clamp(1.7rem,2.45vw,2.65rem);line-height:1.12;margin:4px 0 12px;max-width:22ch;}
+.cinematic-about .about-text p {font-size:clamp(.9rem,1vw,1rem);line-height:1.4;margin:0 0 9px;}
+.cinematic-about .about-actions {margin:14px 0;}
+.cinematic-about .about-highlights {gap:10px;}
+.cinematic-about .mini-card {padding:11px 14px;}
+.cinematic-about .mini-card p {margin:5px 0 0;}
+.site-nav a,.site-nav a:link,.site-nav a:visited,.site-nav a:hover,.site-nav a[aria-current="page"],a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:focus-visible,a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!important;color:#111!important;-webkit-text-fill-color:#111!important;border-color:#fff!important;text-shadow:none!important;}
+@media(max-width:900px){.cinematic-about{min-height:auto;padding:24px 0 32px;}.cinematic-about .about-grid{grid-template-columns:1fr;}.cinematic-about .about-image img{height:auto;max-height:320px;aspect-ratio:16/9;}.cinematic-about .about-text h1{font-size:clamp(1.75rem,4vw,2.35rem);}}
+@media(max-width:600px){.cinematic-about .about-image img{max-height:240px;aspect-ratio:4/3;}.cinematic-about .about-text h1{font-size:clamp(1.6rem,7vw,2rem);}.cinematic-about .about-highlights{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){.cinematic-about .about-background-video{display:none!important;}.cinematic-about{background:#08090c url('Images/Gym_2.jpg') center/cover no-repeat;}}
