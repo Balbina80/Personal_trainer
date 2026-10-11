@@ -1657,3 +1657,27 @@ button:not(.menu-toggle), input[type="submit"] { accent-color:#fff; }
 .about-highlights .mini-card p { margin:5px 0 0; }
 @media(max-width:900px) { .about-featured .about-grid {grid-template-columns:1fr;} .about-featured .about-image img {max-height:390px; aspect-ratio:5/3; width:100%;} }
 @media(max-width:600px) { .nav {min-height:74px;} .logo {height:78px;max-width:150px;} .video-banner {padding:12px 0 0;} .video-banner video {height:200px;border-radius:14px;} .about-featured {padding:1.8rem 0 2.6rem;} .about-featured .about-text h1 {font-size:clamp(1.85rem,8vw,2.45rem);} .about-featured .about-image img {aspect-ratio:4/3;max-height:310px;} }
+
+/* v2.3: background video, accessible contrast and compact above-the-fold intro */
+:root { --accent:#ffffff; --accent-2:#ffffff; }
+.header {position:relative;top:auto;background:#08090c;}
+.nav {min-height:78px;padding:0;}
+.logo {height:86px;max-width:180px;object-fit:contain;}
+.site-nav a,.site-nav a:link,.site-nav a:visited,.site-nav a:hover,.site-nav a[aria-current="page"] {background:#fff!important;color:#111!important;border-color:#fff!important;box-shadow:none!important;}
+a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:focus-visible,button.btn {background:#fff!important;color:#111!important;border:1px solid #fff!important;text-shadow:none!important;-webkit-text-fill-color:#111!important;box-shadow:none!important;}
+a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!important;color:#111!important;border-color:#fff!important;}
+.cinematic-about {position:relative;isolation:isolate;overflow:hidden;background:#08090c;min-height:calc(100svh - 79px);display:flex;align-items:center;padding:22px 0 26px;}
+.about-background-video {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;pointer-events:none;}
+.about-video-overlay {position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.89),rgba(0,0,0,.78)),rgba(0,0,0,.16);pointer-events:none;}
+.cinematic-about .about-grid {grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:clamp(22px,3.5vw,50px);align-items:center;}
+.cinematic-about .about-image img {width:100%;max-height:min(65svh,490px);aspect-ratio:4/4.5;object-fit:cover;object-position:center 30%;border-radius:22px;}
+.cinematic-about .about-text h1 {font-size:clamp(1.8rem,2.8vw,2.9rem);line-height:1.08;margin:5px 0 12px;}
+.cinematic-about .about-text p {font-size:clamp(.9rem,1.05vw,1rem);line-height:1.45;margin-bottom:9px;}
+.cinematic-about .about-actions {margin:13px 0;}
+.cinematic-about .about-highlights {gap:10px;}
+.cinematic-about .mini-card {padding:12px 15px;background:rgba(10,11,15,.86);}
+.cinematic-about .mini-card h3 {font-size:1rem;}
+.cinematic-about .mini-card p {font-size:.87rem;line-height:1.35;}
+@media(max-width:900px){.cinematic-about {min-height:auto;padding:30px 0 38px;}.cinematic-about .about-grid{grid-template-columns:1fr;}.cinematic-about .about-image img{max-height:340px;aspect-ratio:16/9;}.cinematic-about .about-text h1{font-size:clamp(1.8rem,5vw,2.7rem);}}
+@media(max-width:600px){.nav{min-height:72px;}.logo{height:76px;max-width:145px;}.cinematic-about{padding:22px 0 32px;}.cinematic-about .about-image img{max-height:260px;aspect-ratio:4/3;}.cinematic-about .about-text h1{font-size:clamp(1.65rem,7vw,2.15rem);}.cinematic-about .about-highlights{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){.about-background-video{display:none;}.cinematic-about{background:#08090c url("Images/Gym_2.jpg") center/cover no-repeat;}}
