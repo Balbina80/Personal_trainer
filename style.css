@@ -1627,3 +1627,33 @@ body { background:linear-gradient(180deg,#050505,#111 50%,#080808); }
 .single-video-footer p {font-weight:700;font-size:1.2rem;margin:0;}
 @media(max-width:900px){.about-featured .about-grid{grid-template-columns:1fr;}.about-featured .about-image img{max-width:600px;max-height:520px;aspect-ratio:5/4;}.about-featured .about-image{justify-content:flex-start;}}
 @media(max-width:600px){.logo{height:82px;max-width:145px;}.about-featured{padding:2rem 0 3rem;}.about-featured .about-image img{aspect-ratio:4/4;}.single-video-footer{padding:18px;}.single-training-video{border-radius:16px;}}
+
+/* AJ Fitness 2.2 — cleaner monochrome layout */
+:root { --accent:#fff; --accent-2:#fff; }
+html { scroll-padding-top: 105px; }
+.header { background:rgba(8,9,12,.97); }
+.nav { min-height:88px; padding:4px 0; }
+.logo { height:92px; max-width:175px; }
+.site-nav a, .site-nav a:hover, .site-nav a[aria-current="page"] {
+  background:#fff; color:#111; box-shadow:none; border:1px solid #fff;
+}
+.site-nav a:hover, .btn:hover { background:#e6e6e6; color:#111; }
+.btn, .btn:visited { background:#fff; color:#111; box-shadow:none; }
+.btn-secondary, .btn-secondary:visited { background:#181818; color:#fff; border:1px solid #444; }
+.btn-secondary:hover { background:#303030; color:#fff; }
+button:not(.menu-toggle), input[type="submit"] { accent-color:#fff; }
+.stats-strip { margin-top:0; }
+.video-banner { padding:22px 0 10px; background:#080808; }
+.video-banner .container { max-width:1220px; }
+.video-banner video { display:block; width:100%; height:clamp(185px,26vw,320px); object-fit:cover; object-position:center; border-radius:20px; background:#080808; border:1px solid #252525; }
+.about-featured { padding:2.2rem 0 3.5rem; scroll-margin-top:105px; }
+.about-featured .about-grid { grid-template-columns:minmax(240px,.82fr) minmax(0,1.18fr); gap:clamp(24px,4vw,56px); align-items:center; }
+.about-featured .about-image img { aspect-ratio:4/4.5; max-height:470px; object-position:center 30%; }
+.about-featured .about-text h1 { font-size:clamp(2rem,3vw,3.05rem); line-height:1.12; margin:8px 0 15px; }
+.about-featured .about-text p { line-height:1.55; margin-bottom:10px; }
+.about-actions { margin:18px 0; }
+.about-highlights { gap:12px; }
+.about-highlights .mini-card { padding:15px 18px; }
+.about-highlights .mini-card p { margin:5px 0 0; }
+@media(max-width:900px) { .about-featured .about-grid {grid-template-columns:1fr;} .about-featured .about-image img {max-height:390px; aspect-ratio:5/3; width:100%;} }
+@media(max-width:600px) { .nav {min-height:74px;} .logo {height:78px;max-width:150px;} .video-banner {padding:12px 0 0;} .video-banner video {height:200px;border-radius:14px;} .about-featured {padding:1.8rem 0 2.6rem;} .about-featured .about-text h1 {font-size:clamp(1.85rem,8vw,2.45rem);} .about-featured .about-image img {aspect-ratio:4/3;max-height:310px;} }
