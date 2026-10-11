@@ -1739,3 +1739,19 @@ a.btn-secondary,a.btn-secondary:visited,a.btn-secondary:hover {background:#fff!i
   .video-hero-content{padding-left:24px!important;padding-right:24px!important}
   .video-hero-content h1{font-size:clamp(1.9rem,7.5vw,2.65rem)!important}
 }
+
+/* AJ Fitness 2.8: crisp AJ-only mark, readable descriptor to the left */
+.brand-lockup{display:inline-flex;align-items:center;gap:14px;white-space:nowrap}
+.brand-descriptor{color:#fff;font-weight:750;font-size:clamp(.72rem,.95vw,.95rem);letter-spacing:.14em;line-height:1.35;text-align:right}
+.header .brand-lockup .logo{display:block;height:70px!important;width:auto!important;max-width:none!important;filter:none!important;object-fit:contain}
+.footer-brand-lockup .footer-logo{display:block;height:78px!important;width:auto!important;max-width:none!important;filter:none!important;object-fit:contain}
+@media(min-width:768px){
+  .video-hero-content{width:min(96%,var(--max-width))!important;padding-left:0!important;padding-right:24px!important;transform:translateX(-16px)}
+}
+@media(max-width:767px){
+  .brand-lockup{gap:8px}
+  .brand-descriptor{font-size:.65rem;letter-spacing:.09em}
+  .header .brand-lockup .logo{height:53px!important}
+  .footer-brand-lockup .footer-logo{height:65px!important}
+  .video-hero-content{padding-left:18px!important}
+}
